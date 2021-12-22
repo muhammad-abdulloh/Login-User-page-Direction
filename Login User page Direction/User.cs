@@ -9,46 +9,60 @@ namespace Login_User_page_Direction
     public enum Gender
     {
         Male,
-        Female,
-        Other
+        Female
+        
     }
     internal class User : SignIn
     {
-        private static string firstnamePrivate;
+        private  string firstnamePrivate;
 
-        public static string firstname
+        public  string firstname
         {
             get { return firstnamePrivate; }
             set { firstnamePrivate = value; }
         }
 
-        private static string lastnamePrivate;
+        private  string lastnamePrivate;
 
-        public static string lastname
+        public  string lastname
         {
             get { return lastnamePrivate; }
             set { lastnamePrivate = value; }
         }
 
-        private static DateTime birthDatePrivate;
+        private  DateTime birthDatePrivate;
 
-        public static  DateTime birthDate
+        public   DateTime birthDate
         {
             get { return birthDatePrivate; }
             set { birthDatePrivate = value; }
         }
 
-        private static string emailPrivate;
+        private  string emailPrivate;
 
-        public static  string email
+        public   string email
         {
             get { return emailPrivate; }
             set { emailPrivate = value; }
         }
 
-        public static void Show()
+        private string genderPrivate;
+        private static object user;
+
+        public string gender
         {
-            Console.WriteLine("FirstName: {0}\nLastName: {1}\nGender: {2}\nBirthDate: {3}\nEmail: {4}", firstname, lastname, Gender.Male, birthDate, email);
+            get { return genderPrivate; }
+            set { genderPrivate = value; }
+        }
+
+
+
+        //string firstname, string lastname, string email, string gender, DateTime birthDate
+
+        public void Show()
+        {
+           
+            Console.WriteLine("FirstName: {0}\nLastName: {1}\nGender: {2}\nBirthDate: {3}\nEmail: {4}", firstname, lastname, email, gender, birthDate);
         }
 
 

@@ -8,17 +8,21 @@ namespace Login_User_page_Direction
         static void Main(string[] args)
         {
            
-            string path = @"C:\Users\PC shop\Dropbox\PC\Desktop\Data.txt";
+           
+            SignIn signIn = new SignIn();
+            
 
-            string[] date = File.ReadAllLines(path);
+            signIn.login = "Buzrukov8";
+            signIn.password = "246264562";
 
-            foreach (string dateStr in date)
-            {
-                if (!string.IsNullOrEmpty(dateStr))
-                {
-                    Console.WriteLine(dateStr);
-                }
-            }
+            User user = Validation.GetAutentification(signIn);
+
+            user.Show();
+
+
+
+
+
         }
     }
 }
